@@ -13,6 +13,7 @@
 <body>
   <!-- Hero Section -->
   <section class="hero" id="hero">
+    <div class="hero-bg"></div>
     <div class="hero-content">
       <div class="hero-logo bg-gradient">
         <img src="assets/images/hero-logo.png" alt="THYLL Events">
@@ -117,5 +118,24 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Parallax effect for hero section
+    window.addEventListener('scroll', function() {
+      const scrolled = window.pageYOffset;
+      const heroBg = document.querySelector('.hero-bg');
+      const heroContent = document.querySelector('.hero-content');
+      
+      if (heroBg) {
+        // Background moves down as you scroll (0.5 speed)
+        heroBg.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
+      }
+      
+      if (heroContent) {
+        // Content moves up faster (opposite direction, 2.0 speed)
+        heroContent.style.transform = 'translateY(' + (-150 - scrolled * 2.0) + 'px)';
+      }
+    });
+  </script>
 </body>
 </html>
