@@ -741,7 +741,13 @@ footer {
   .dna-content,
   .team-content {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
+  }
+
+  /* Text first on mobile, then images */
+  .dna-text,
+  .team-text {
+    order: -1;
   }
 
   .dna-images,
@@ -752,12 +758,20 @@ footer {
 
   .dna-images img,
   .team-images img {
-    height: 200px;
+    height: 180px;
+    border-radius: 8px;
   }
 
   .dna-text h2,
   .team-text h2 {
-    font-size: 28px;
+    font-size: 26px;
+    margin-bottom: 1rem;
+  }
+
+  .dna-text p,
+  .team-text p {
+    font-size: 16px;
+    line-height: 1.7;
   }
 
   .events-grid {
@@ -780,5 +794,50 @@ footer {
   .footer-container {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+/* Mobile - Horizontal scrolling images for DNA & Team */
+@media (max-width: 600px) {
+  .dna-images,
+  .team-images {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 0.75rem;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .dna-images img,
+  .team-images img {
+    flex: 0 0 85%;
+    height: 200px;
+    object-fit: cover;
+    scroll-snap-align: center;
+    border-radius: 8px;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .dna-images::-webkit-scrollbar,
+  .team-images::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .dna-images::-webkit-scrollbar-thumb,
+  .team-images::-webkit-scrollbar-thumb {
+    background: var(--color-medium);
+    border-radius: 2px;
+  }
+
+  .dna-text h2,
+  .team-text h2 {
+    font-size: 24px;
+  }
+
+  .dna-text p,
+  .team-text p {
+    font-size: 15px;
   }
 }
