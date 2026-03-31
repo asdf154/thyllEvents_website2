@@ -445,6 +445,9 @@ section {
   border-radius: 12px;
   padding: 2.5rem 2rem;
   transition: all 0.4s ease;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .contact-item:hover {
