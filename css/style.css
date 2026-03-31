@@ -71,7 +71,7 @@ header {
   justify-content: center;
   text-align: center;
   color: var(--color-white);
-  padding: 2rem;
+  padding: 0 2rem;
   position: relative;
 }
 
@@ -89,6 +89,7 @@ header {
   max-width: 980px;
   position: relative;
   z-index: 1;
+  transform: translateY(-150px);
 }
 
 .bg-gradient {
@@ -97,7 +98,7 @@ header {
 
 .hero-logo {
   max-width: 280px;
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 1.5rem;
   animation: fadeInDown 1s ease-out;
 }
 
@@ -110,7 +111,7 @@ header {
 .hero h2 {
   font-family: var(--font-heading);
   font-size: 32px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   letter-spacing: 0.15em;
   font-weight: 300;
   text-transform: uppercase;
