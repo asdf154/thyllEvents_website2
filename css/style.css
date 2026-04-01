@@ -6,6 +6,7 @@
   --color-accent: #375bdc;
   --color-accent-dark: #000971;
   --color-accent-royal: #1a30a4;
+  --color-button: #000971;
   --color-light: #f4f6fa;
   --color-medium: #bec0c5;
   --color-white: #ffffff;
@@ -143,7 +144,7 @@ header {
 .btn {
   display: inline-block;
   padding: 1.2rem 2.5rem;
-  background: var(--color-accent);
+  background: var(--color-button);
   color: var(--color-white);
   text-decoration: none;
   font-family: var(--font-body);
@@ -155,13 +156,13 @@ header {
   cursor: pointer;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  box-shadow: 0 4px 15px rgba(55, 91, 220, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 9, 113, 0.3);
 }
 
 .btn:hover {
   background: var(--color-accent-royal);
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(55, 91, 220, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 9, 113, 0.4);
 }
 
 .btn-outline {
