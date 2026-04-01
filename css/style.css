@@ -713,6 +713,15 @@ footer {
     letter-spacing: 0.1em;
   }
 
+  .hero-text-main,
+  .hero-text-sub {
+    display: block;
+  }
+
+  .hero-divider {
+    display: none;
+  }
+
   .hero-buttons {
     flex-direction: column;
     gap: 1rem;
@@ -781,6 +790,15 @@ footer {
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .contact-content h2 {
+    font-size: 28px;
+  }
+
+  .contact-heading-main,
+  .contact-heading-sub {
+    display: block;
   }
 
   .contact-item {
